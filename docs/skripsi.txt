@@ -1,0 +1,269 @@
+TUGAS AKHIR
+
+
+ANALISIS PREDIKTIF REKENING BERISIKO TERKAIT TINDAK PENCUCIAN UANG MENGGUNAKAN MODEL CATBOOST: STUDI KASUS KEBIJAKAN PEMBLOKIRAN REKENING PASIF
+
+
+
+
+Sebagai Salah Satu Syarat untuk Memperoleh Gelar Sarjana Komputer pada 
+
+PJJ Informatika
+
+
+
+
+Oleh:
+
+220401010015, Haris Wahyudi
+
+
+
+PROGRAM STUDI INFORMATIKA PJJ S1
+UNIVERSITAS SIBER ASIA
+AGUSTUS 2025
+
+PERNYATAAN KEABSAHAN
+
+Saya yang bertanda-tangan dibawah ini:
+
+
+Nama	: Haris Wahyudi
+NIM                             : 220401010015
+Program Studi	: PJJ Informatika
+Judul Tugas Akhir	: ANALISIS PREDIKTIF REKENING BERISIKO TERKAIT 	  TINDAK PENCUCIAN UANG MENGGUNAKAN MODEL 	  CATBOOST: STUDI KASUS KEBIJAKAN PEMBLOKIRAN 	  REKENING PASIF
+
+Tugas Akhir disusun secara ilmiah yang memenuhi aspek originalitas, valid dan dapat dipertanggungjawabkan. 
+Tugas Akhir disusun tidak menggunakan Generative AI untuk perbantuan penulisan kalimat/paragraf/bab.
+Data yang digunakan dalam penelitian adalah data yang bersumber pada penerapan metode usulan/dari sumber ilmiah lain/dari instansi yang berizin secara resmi
+
+Jika di kemudian hari ditemukan hal-hal yang melanggar ketentuan penyusuan
+Tugas Akhir, saya siap bersedia dan menerima Sanksi Akademik dari Universitas
+Siber Asia.
+
+Demikian pernyataan ini saya buat.
+
+
+Batam, 26 November 2025
+Yang membuat pernyataan,
+
+Haris Wahyudi
+
+HALAMAN PERNYATAAN ORISINALITAS
+
+Saya yang bertanda-tangan dibawah ini:
+
+Nama	: Haris Wahyudi
+NIM                             : 220401010015
+Program Studi	: PJJ Informatika
+Judul Tugas Akhir	: ANALISIS PREDIKTIF REKENING BERISIKO TERKAIT TINDAK PENCUCIAN UANG MENGGUNAKAN MODEL CATBOOST: STUDI KASUS KEBIJAKAN PEMBLOKIRAN REKENING PASIF
+Menyatakan dengan sesungguhnya bahwa Tugas Akhir ini merupakan hasil penelitian, pemikiran dan pemaparan asli saya sendiri. Saya tidak mencantumkan tanpa pengakuan bahan - bahan yang telah dipublikasikan sebelumnya atau ditulis oleh orang lain, atau sebagai bahan yang pernah diajukan untuk gelar atau ijasah pada Universitas Siber Asia atau perguruan tinggi lainnya. 
+
+Apabila dikemudian hari terdapat penyimpangan dan ketidakbenaran dalam pernyataan ini, maka saya bersedia menerima sanksi akademik sesuai dengan peraturan yang berlaku di Universitas Siber Asia.
+
+Demikian pernyataan ini saya buat. Batam, 26 November 2025
+Yang membuat pernyataan,
+
+Haris Wahyudi
+
+HALAMAN PENGESAHAN
+
+Tugas Akhir ini diajukan oleh :
+Nama		: Haris Wahyudi
+NIM                              : 220401010015
+Program Studi		: PJJ Informatika
+Judul Tugas Akhir	: ANALISIS PREDIKTIF REKENING BERISIKO TERKAIT TINDAK PENCUCIAN UANG MENGGUNAKAN MODEL CATBOOST: STUDI KASUS KEBIJAKAN PEMBLOKIRAN REKENING PASIF
+
+
+Telah berhasil dipertahankan dihadapan Dewan Penguji dan diterima sebagai bagian persyaratan yang diperlukan untuk memperoleh gelar Sarjana Komputer pada Program Studi PJJ Informatika Universitas Siber Asia.
+
+
+Ketua Sidang / Dosen Penguji I
+Dosen Penguji II
+………………………………..
+………………………………
+Dosen Pembimbing
+Ketua Program Studi
+Cian Ramadhona Hassolthine, S.Kom,
+Syahid Abdullah, S.Si, M.Kom.
+
+
+Ditetapkan di : Jakarta 
+Tanggal : 10/8/2025
+
+KATA PENGANTAR
+
+Puji syukur penulis panjatkan ke hadirat Tuhan Yang Maha Esa, karena atas berkat dan rahmat-Nya penulis dapat menyelesaikan Tugas Akhir ini. Penyusunan Tugas Akhir ini dilakukan dalam rangka memenuhi salah satu syarat untuk mencapai gelar Sarjana Program Studi Informatika, Universitas Siber Asia. Ketertarikan penulis terhadap topik penelitian ini berawal dari maraknya polemik mengenai kebijakan pemblokiran rekening pasif oleh Pusat Pelaporan dan Analisis Transaksi Keuangan (PPATK). Kebijakan tersebut menjadi sorotan karena diterapkan secara luas, termasuk terhadap rekening yang menjadi pasif akibat alasan yang sebenarnya wajar, seperti pembukaan rekening untuk tujuan promosi, atau seperti penyaluran bantuan sosial. Di sisi lain, PPATK menegaskan bahwa rekening pasif memiliki potensi untuk disalahgunakan dalam aktivitas ilegal, termasuk tindak pencucian uang. Kondisi inilah yang menunjukkan perlunya pendekatan analitik yang lebih akurat dan berbasis data dalam menilai tingkat risiko suatu rekening sebelum kebijakan pemblokiran diterapkan.
+
+Penulis menyadari bahwa tanpa bantuan dan bimbingan dari berbagai pihak, sejak masa perkuliahan hingga proses penyusunan Tugas Akhir ini, sangatlah sulit bagi penulis untuk dapat menyelesaikannya. Oleh karena itu, penulis menyampaikan terima kasih sebesar-besarnya kepada:
+
+Ibu Cian Ramadhona Hassolthine, S.Kom, M.Kom selaku dosen pembimbing yang telah menyediakan waktu, tenaga, dan pemikiran untuk membimbing dan mengarahkan penulis dalam penyusunan Tugas Akhir ini.
+Orang tua dan keluarga penulis yang selalu memberikan dukungan moral, doa, dan motivasi selama proses penyusunan Tugas Akhir; dan
+Sahabat-sahabat penulis yang telah memberikan bantuan, dorongan, serta menemani penulis dalam menyelesaikan Tugas Akhir ini.
+
+Akhir kata, penulis berharap Tuhan Yang Maha Esa berkenan membalas segala kebaikan semua pihak yang telah membantu. Semoga Tugas Akhir ini dapat memberikan manfaat bagi pengembangan ilmu pengetahuan dan menjadi kontribusi untuk peningkatan keamanan transaksi digital di Indonesia
+
+Batam, 26 November 2025
+Penulis
+
+
+ABSTRAK
+
+Peningkatan kasus pencucian uang di Indonesia menimbulkan tantangan serius bagi stabilitas sistem keuangan dan efektivitas pengawasan transaksi. Salah satu modus yang sering digunakan adalah penyalahgunaan rekening tertentu sebagai media perputaran dana untuk menyamarkan asal-usul transaksi ilegal. Dalam upaya pencegahan, PPATK terus mendorong peningkatan kemampuan analisis untuk mengidentifikasi rekening yang berisiko tinggi terkait tindak pencucian uang. Namun, pendekatan konvensional kerap menimbulkan kesalahan identifikasi karena tidak mempertimbangkan pola transaksi secara menyeluruh.
+
+Penelitian ini bertujuan mengembangkan model analisis prediktif untuk mengidentifikasi rekening berisiko terkait tindak pencucian uang menggunakan algoritma CatBoost. Dataset yang digunakan mencakup pola transaksi, frekuensi aktivitas, dan karakteristik arus dana dalam bentuk data sintetis. Metode klasifikasi diterapkan untuk mengenali pola perilaku transaksi yang sering ditemukan pada aktivitas pencucian uang. Hasil penelitian menunjukkan bahwa CatBoost mampu memberikan akurasi prediksi yang lebih tinggi dibandingkan pendekatan berbasis aturan sederhana. Temuan ini diharapkan dapat menjadi rekomendasi bagi PPATK dalam meningkatkan efektivitas identifikasi dini terhadap rekening yang berpotensi berisiko.
+
+Kata Kunci: Judi Online, CatBoost, PPATK
+
+
+
+
+ABSTRACT
+
+The rise of money laundering cases in Indonesia poses a significant challenge to the stability of the financial system and the effectiveness of transaction monitoring. One commonly used method involves exploiting specific bank accounts as channels to circulate illicit funds and obscure their origins. To strengthen preventive measures, PPATK has emphasized the need for improved analytical capabilities to identify high-risk accounts potentially associated with money laundering activities. However, conventional approaches often lead to misclassification due to limited consideration of comprehensive transaction patterns.
+
+This study aims to develop a predictive analysis model to identify high-risk accounts potentially involved in money laundering using the CatBoost algorithm. The dataset consists of synthetic data representing transaction patterns, activity frequency, and fund-flow characteristics. A classification method is applied to detect behavioral patterns typically observed in money laundering activities. The results demonstrate that CatBoost achieves higher predictive accuracy compared to simple rule-based methods. These findings are expected to serve as recommendations for PPATK in enhancing the effectiveness of early identification of high-risk financial accounts.
+
+Keywords: Online Gambling, CatBoost, PPATK
+
+DAFTAR ISI
+
+PERNYATAAN ORSINILITAS	ii
+LEMBAR PENGESAHAN	iii
+KATA PENGANTAR	iv
+DAFTAR ISI	vi
+DAFTAR TABEL	viii
+DAFTAR GAMBAR	ix
+DAFTAR LAMPIRAN	x
+ABSTRAK	xi
+ABSTRACT	xii
+BAB I PENDAHULUAN	1
+BAB II METODOLOGI PENELITIAN	5
+BAB III IMPLEMENTASI	10
+BAB IV KESIMPULAN DAN SARAN	28
+DAFTAR PUSTAKA	30
+
+DAFTAR TABEL
+
+
+
+Tabel 3.1 Analisa Kebutuhan Development	10
+
+DAFTAR GAMBAR
+Gambar 2.1 Metode Waterfall	5
+
+
+DAFTAR LAMPIRAN
+Lampiran 1. Wawancara
+
+BAB I PENDAHULUAN
+
+Latar Belakang
+kemampuan offline, integrasi AI untuk personalisasi, dan fitur parsing otomatis dari platform komunikasi populer seperti WhatsApp.
+
+
+Rumusan Masalah
+Untuk memfokuskan penelitian, maka batasan masalah yang ditetapkan adalah sebagai berikut.
+
+
+Batasan Masalah
+Tujuan yang ingin dicapai dari penelitian ini adalah sebagai berikut.
+
+
+Tujuan Penelitian
+          Tujuan yang ingin dicapai dari penelitian ini adalah sebagai berikut.
+
+
+
+Manfaat Penelitian
+Adapun manfaat dari penelitian ini adalah sebagai berikut.
+Metode Penelitian
+Adapun manfaat dari penelitian ini adalah sebagai berikut.
+
+
+BAB II LANDASAN METODE
+
+Berdasarkan penelitian-penelitian sebelumnya, metodologi analisis sentimen yang digunakan dalam penelitian ini merujuk pada berbagai pendekatan dan metode yang telah terbukti efektif namun juga memiliki kekurangan masing-masing.
+
+BAB III 
+IMPLEMENTASI METODE USULAN
+
+Implementasi Metode Usulanb
+
+BAB IV 
+      HASIL DAN ANALISA
+
+KESIMPULAN
+
+Berdasarkan hasil analisis dan perancangan, serta implementasi dan pembahasan, maka dapat diambil kesimpulan sebagai berikut :
+
+SARAN
+
+Adapun saran dari penulis untuk melanjutkan perkembangan dari sistem yang sudah dibuat yaitu:
+Aplikasi dapat menambahkan tampilan stastistik barang pada Dashboard.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BAB V
+      KESIMPULAN
+
+DAFTAR PUSTAKA
+
+
+[1]	D. Saputro and D. Swanjaya, “Analisa Prediksi Harga Saham Menggunakan Neural Network Dan Net Foreign Flow,” Generation Journal, vol. 7, no. 2, pp. 96–104, Jul. 2023, doi: 10.29407/gj.v7i2.20001.
+[2]	D. Saputro and D. Swanjaya, “Analisa Prediksi Harga Saham Menggunakan Neural Network Dan Net Foreign Flow,” Generation Journal, vol. 7, no. 2, pp. 96–104, Jul. 2023, doi: 10.29407/gj.v7i2.20001.
+
+
+LAMPIRAN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DAFTAR RIWAYAT HIDUP
+
+Haris Wahyudi lahir di Medan pada tanggal 04 Oktober 2003. Penulis merupakan mahasiswa Program Sarjana Ilmu Komputer di Universitas Siber Asia. Selama menjalani pendidikan, penulis aktif mendalami bidang pengembangan perangkat lunak, kecerdasan buatan, dan komputasi awan. Sistem pembelajaran daring memberikan fleksibilitas sehingga penulis dapat terus meningkatkan kemampuan akademik tanpa mengganggu aktivitas profesional.
+
+Di luar kegiatan perkuliahan, penulis memiliki pengalaman sebagai Fullstack Developer dan terlibat dalam berbagai proyek pengembangan aplikasi web maupun mobile. Pengalaman tersebut memperkuat pemahaman penulis dalam merancang, membangun, dan mengelola sistem teknologi informasi yang digunakan oleh berbagai organisasi dan pengguna dalam skala besar.
+
+Melalui kombinasi antara pendidikan formal dan pengalaman praktis, penulis berkomitmen untuk terus berkembang, beradaptasi dengan perkembangan teknologi terbaru, serta berkontribusi pada dunia akademis maupun industri melalui karya dan inovasi di bidang teknologi informasi
