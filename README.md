@@ -13,6 +13,10 @@
 - [x] Daftar Pustaka [14]–[20] sudah ditambahkan (Syukur, Hanjani, Ramineni, Pratama, Florek, Egressy, Jensen — via scite)
 - [x] Subbab 2.3.3 di-rewrite dengan kutipan per pola (4 artikel baru: [21]–[24])
 - [x] Daftar Pustaka [21]–[24] sudah ditambahkan (Dumitrescu, Cardoso/LaundroGraph, Song, Irwin — via scite)
+- [x] Sitasi [14]–[17] ditambahkan di Tabel 2.1 (Syukur, Hanjani, Ramineni, Pratama)
+- [x] Sitasi [18] ditambahkan di Tabel 2.1 dan BAB IV §4.2 (Florek)
+- [x] Sitasi [19] ditambahkan di BAB IV §4.1.3 (Egressy)
+- [x] Sitasi [20] ditambahkan di paragraf penutup Tabel 2.1 (Jensen)
 
 ---
 
@@ -96,7 +100,7 @@ Tabel 2.1 (baris ~439) memuat **8 penelitian** — sekarang **semua sudah punya 
 | [19] | Egressy et al. (2024) — Multi-GNN, disebut di BAB IV | arXiv:2306.11586 (AAAI 2024) |
 | [20] | Jensen & Iosifidis (2023) — AML patterns survey | scite — DOI: 10.1109/access.2023.3239549 |
 
-**Masih perlu diedit:** Teks di BAB IV baris ~1441 menyebut "Florek & Zagdański (2025)" dan baris ~1384 menyebut "Egressy et al. (2024)" **tanpa nomor referensi** `[n]`. Tambahkan `[18]` dan `[19]` di teks tersebut.
+~~**Masih perlu diedit:**~~ ✅ **SUDAH SELESAI** — Sitasi `[14]`–`[17]` ditambahkan di Tabel 2.1, `[18]` di Tabel 2.1 + BAB IV §4.2, `[19]` di BAB IV §4.1.3, `[20]` di paragraf penutup Tabel 2.1.
 
 ### 7. LAMPIRAN Kosong (baris ~1511)
 
@@ -112,7 +116,7 @@ Halaman LAMPIRAN hanya berisi heading tanpa konten.
 | --------- | --------------------------------------------------- | ----------------------------------- |
 | 🔴 Tinggi | Cross-reference salah (poin 5)                      | Pembaca bingung, dosen pasti notice |
 | 🔴 Tinggi | Lembar Pengesahan kosong (poin 1)                   | Wajib diisi sebelum submit          |
-| 🟡 Sedang | Tambahkan `[18]` dan `[19]` di teks BAB IV (poin 6) | Sitasi tanpa nomor referensi        |
+| ✅ Selesai | ~~Tambahkan `[14]`–`[20]` di teks~~ (poin 6) | ~~Sitasi tanpa nomor referensi~~ DONE |
 | 🟡 Sedang | Daftar ISI/Gambar/Tabel tidak lengkap (poin 2-4)    | Ketidakcocokan daftar vs isi        |
 | 🟢 Rendah | Lampiran kosong (poin 7)                            | Tergantung requirement kampus       |
 

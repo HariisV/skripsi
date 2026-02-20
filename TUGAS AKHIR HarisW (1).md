@@ -476,7 +476,7 @@ Konfirmasi efektivitas CatBoost dalam menangani data kompleks dengan multiple va
 
 3
 
-Syukur \(2024\)
+Syukur \(2024\) \[14\]
 
 Prediksi Indeks Kualitas Udara Menggunakan Metode CatBoost
 
@@ -488,7 +488,7 @@ Metodologi optimasi hyperparameter yang dapat diadaptasi
 
 4
 
-Hanjani \(2024\)
+Hanjani \(2024\) \[15\]
 
 Prediksi Kadar Polutan Indikator Kualitas Udara di Pekanbaru Menggunakan CatBoost
 
@@ -512,7 +512,7 @@ Sumber dataset utama; pola transaksi \(_fan\-in, fan\-out, cycles_\)\.
 
 6
 
-Ramineni & Mastouri \(2025\)
+Ramineni & Mastouri \(2025\) \[16\]
 
 Credit Card Fraud Detection Using CatBoost
 
@@ -524,7 +524,7 @@ Teknik penanganan imbalance \(SMOTE\); keunggulan CatBoost untuk data transaksi
 
 7
 
-Pratama & Wahid \(2025\)
+Pratama & Wahid \(2025\) \[17\]
 
 Fraudulent Transaction Detection in Online Systems Using Random Forest and Gradient Boosting
 
@@ -536,7 +536,7 @@ Konsep rekayasa fitur rasio; analisis jenis transaksi untuk deteksi anomali
 
 8
 
-Florek & Zagdański \(2025\)
+Florek & Zagdański \(2025\) \[18\]
 
 Benchmarking State\-of\-the\-Art Gradient Boosting Algorithms for Classification
 
@@ -546,7 +546,7 @@ CatBoost kuat tanpa tuning; LightGBM meningkat setelah tuning
 
 Justifikasi pemilihan CatBoost untuk data kompleks tanpa tuning ekstensif
 
-Berdasarkan tinjauan terhadap literatur sebelumnya, penelitian ini mengadaptasi metodologi deteksi transaksi mencurigakan yang mengombinasikan algoritma _CatBoost_ dengan teknik _feature engineering_ berbasis pola transaksi\. Metode ini dipilih karena kemampuannya dalam menangani klasifikasi transaksi pada data keuangan yang memiliki fitur _kategorikal_ dominan dan ketidakseimbangan kelas ekstrem, sebagaimana telah dibuktikan efektivitasnya dalam berbagai penelitian terdahulu\.
+Berdasarkan tinjauan terhadap literatur sebelumnya, penelitian ini mengadaptasi metodologi deteksi transaksi mencurigakan yang mengombinasikan algoritma _CatBoost_ dengan teknik _feature engineering_ berbasis pola transaksi\. Metode ini dipilih karena kemampuannya dalam menangani klasifikasi transaksi pada data keuangan yang memiliki fitur _kategorikal_ dominan dan ketidakseimbangan kelas ekstrem, sebagaimana telah dibuktikan efektivitasnya dalam berbagai penelitian terdahulu \[20\]\.
 
 Metode ini melibatkan penerapan _Cross\-Industry Standard Process for Data Mining \(CRISP\-DM\)_ untuk mengidentifikasi pola transaksi mencurigakan dalam dataset IBM AML Transactions\. Dimulai dari pemahaman bisnis terkait tipologi pencucian uang, pemahaman karakteristik data transaksi, preprocessing data, rekayasa fitur berbasis pola \(fan\-in, fan\-out, scatter\-gather, cycles\), pemodelan dengan CatBoost, dan terakhir evaluasi menggunakan metrik F1\-Score dan AUC\-PR\. Analisis ini menggunakan model machine learning CatBoost untuk mengklasifikasikan transaksi sebagai normal atau mencurigakan\.
 
@@ -1381,7 +1381,7 @@ Yang lebih penting adalah stabilitas Precision di seluruh split \(82–88%\)\. K
 
 Hasil model _CatBoost_ dibandingkan dengan dua model pembanding yang diujikan pada _dataset_ IBM AML Transactions _HI\-Small_ yang sama:
 
-1. Arsitektur Multi\-GNN \(GIN\) yang dilaporkan oleh Egressy et al\. \(2024\),
+1. Arsitektur Multi\-GNN \(GIN\) yang dilaporkan oleh Egressy et al\. \(2024\) \[19\],
 2. Pendekatan _XGBoost\+SMOTE_ dari kajian publik pada platform _Kaggle_\.
 
 Multi\-GNN merepresentasikan paradigma representation learning berbasis graf, sementara XGBoost\+SMOTE merepresentasikan strategi oversampling sintetis yang umum diadopsi dalam riset AML\. Hasil Multi\-GNN dan XGBoost\+SMOTE diperoleh dari eksperimen ulang terhadap kode kajian publik pada dataset yang sama\.
@@ -1438,7 +1438,7 @@ Perbedaan paling mencolok terletak pada Precision: XGBoost\+SMOTE hanya mencapai
 
 Efektivitas CatBoost pada penelitian ini tidak terlepas dari kesesuaian antara karakteristik algoritma dan sifat data AML\. Mekanisme ordered target encoding memungkinkan fitur kategorikal diproses secara langsung, sehingga Payment Format dapat mempertahankan kekayaan informasinya dan menjadi fitur paling diskriminatif \(Tabel 3\.5\)\. Selain itu, konsistensi Precision lintas split \(Tabel 3\.4\) mengindikasikan bahwa ordered boosting berhasil mencegah prediction shift pada data temporal — hal yang krusial mengingat distribusi transaksi berubah dari waktu ke waktu\.
 
-Hasil feature importance dan analisis korelasi \(Gambar 3\.9–3\.10\) mengkonfirmasi bahwa fitur\-fitur rekayasa berhasil menerjemahkan konsep domain AML menjadi sinyal numerik yang dapat dimanfaatkan model\. Fitur\-fitur berbasis graf menangkap pola layering, fitur temporal menangkap karakteristik structuring, dan fitur pasangan akun membedakan transaksi berulang yang lazim pada aktivitas normal dari koneksi baru yang kerap mengindikasikan pencucian uang\. Kesesuaian ini menjelaskan mengapa pendekatan feature engineering eksplisit mengungguli representation learning otomatis \(Multi\-GNN\) pada dataset ini — sejalan dengan temuan Florek & Zagdański \(2025\) bahwa gradient boosting sering kompetitif dengan deep learning pada data tabular\.
+Hasil feature importance dan analisis korelasi \(Gambar 3\.9–3\.10\) mengkonfirmasi bahwa fitur\-fitur rekayasa berhasil menerjemahkan konsep domain AML menjadi sinyal numerik yang dapat dimanfaatkan model\. Fitur\-fitur berbasis graf menangkap pola layering, fitur temporal menangkap karakteristik structuring, dan fitur pasangan akun membedakan transaksi berulang yang lazim pada aktivitas normal dari koneksi baru yang kerap mengindikasikan pencucian uang\. Kesesuaian ini menjelaskan mengapa pendekatan feature engineering eksplisit mengungguli representation learning otomatis \(Multi\-GNN\) pada dataset ini — sejalan dengan temuan Florek & Zagdański \(2025\) \[18\] bahwa gradient boosting sering kompetitif dengan deep learning pada data tabular\.
 
 Perbandingan tiga model \(Tabel 4\.1\) juga memberikan bukti empiris bahwa strategi penanganan ketidakseimbangan kelas berpengaruh signifikan terhadap kualitas prediksi\. Pendekatan cost\-sensitive learning yang mempertahankan distribusi data asli terbukti lebih layak secara operasional dibanding oversampling sintetis yang menggeser batas keputusan terlalu agresif pada rasio ketidakseimbangan ekstrem\. Temuan ini memperkuat pentingnya pemilihan metrik evaluasi yang tepat: ROC\-AUC yang tampak tinggi dapat menyesatkan pada data sangat tidak seimbang, sementara PR\-AUC memberikan gambaran yang lebih jujur tentang kemampuan model membedakan kelas minoritas\.
 
