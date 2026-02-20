@@ -112,13 +112,13 @@ Halaman LAMPIRAN hanya berisi heading tanpa konten.
 
 ## 📋 Ringkasan Prioritas
 
-| Prioritas | Item                                                | Dampak                              |
-| --------- | --------------------------------------------------- | ----------------------------------- |
-| 🔴 Tinggi | Cross-reference salah (poin 5)                      | Pembaca bingung, dosen pasti notice |
-| 🔴 Tinggi | Lembar Pengesahan kosong (poin 1)                   | Wajib diisi sebelum submit          |
-| ✅ Selesai | ~~Tambahkan `[14]`–`[20]` di teks~~ (poin 6) | ~~Sitasi tanpa nomor referensi~~ DONE |
-| 🟡 Sedang | Daftar ISI/Gambar/Tabel tidak lengkap (poin 2-4)    | Ketidakcocokan daftar vs isi        |
-| 🟢 Rendah | Lampiran kosong (poin 7)                            | Tergantung requirement kampus       |
+| Prioritas  | Item                                             | Dampak                                |
+| ---------- | ------------------------------------------------ | ------------------------------------- |
+| 🔴 Tinggi  | Cross-reference salah (poin 5)                   | Pembaca bingung, dosen pasti notice   |
+| 🔴 Tinggi  | Lembar Pengesahan kosong (poin 1)                | Wajib diisi sebelum submit            |
+| ✅ Selesai | ~~Tambahkan `[14]`–`[20]` di teks~~ (poin 6)     | ~~Sitasi tanpa nomor referensi~~ DONE |
+| 🟡 Sedang  | Daftar ISI/Gambar/Tabel tidak lengkap (poin 2-4) | Ketidakcocokan daftar vs isi          |
+| 🟢 Rendah  | Lampiran kosong (poin 7)                         | Tergantung requirement kampus         |
 
 ---
 
